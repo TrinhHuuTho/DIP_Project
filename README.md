@@ -2,6 +2,9 @@
 --- 
 ## Cấu trúc project
 
+- Các file **.py** hiện tại chỉ là ví dụ mẫu nhằm minh họa cho cấu trúc project, các bạn follow để tránh conflicts không đáng có nha. Thanks!
+
+```shell
 DIP_PROJECT/
 │
 ├── app.py               # Điểm bắt đầu chạy app Streamlit
@@ -29,4 +32,8 @@ DIP_PROJECT/
 │   └── helpers.py        # Các hàm tiện ích
 │
 └── requirements.txt     # Các thư viện cần cài (streamlit, pandas, numpy, v.v.)
-
+```
+---
+## Lưu ý:
+- Thiết lập **.gitignore** để tránh commit nhầm nhé
+- Thiết lập **.env** để tránh rò rỉ thông tin bảo mật nhé
