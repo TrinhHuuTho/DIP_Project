@@ -59,8 +59,8 @@ def Menu():
     else:
         menu = [
             "🏠 Trang chủ",
-            "📸 Nhận dạng biển số xe",
-            "📷 Nhận dạng chữ viết",
+            "📸 Điều chỉnh âm lượng bằng cử chỉ",
+            "📷 Đếm ngón tay",
             "...",
             "⬅️ Quay lại",
             "📞 Liên hệ"
