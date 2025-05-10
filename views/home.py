@@ -1,8 +1,10 @@
 import streamlit as st
+
 st.set_page_config(
     page_title="Đồ án cuối kỳ DIP",
     page_icon="☕",
 )
+
 def Header():
     st.markdown(
         """
@@ -41,49 +43,32 @@ def Header():
     })
 
 def Menu():
-    # Khởi tạo trạng thái menu trong session_state
-    if 'menu_state' not in st.session_state:
-        st.session_state.menu_state = "main"
-
     st.sidebar.title("📌 Menu")
 
     # Menu chính
-    if st.session_state.menu_state == "main":
-        menu = [
-            "🏠 Trang chủ",
-            "📸 Nhận dạng khuôn mặt",
-            "📷 Nhận dạng trái cây",
-            "3️⃣ Chương 3",
-            "4️⃣ Chương 4",
-            "5️⃣ Chương 5",
-            "9️⃣ Chương 9",
-            "➕ Làm thêm",
-            "📞 Liên hệ"
-        ]
-        choice = st.sidebar.selectbox("🔽 Chọn chức năng", menu)
+    main_menu = [
+        "🏠 Trang chủ",
+        "📸 Nhận dạng khuôn mặt",
+        "📷 Nhận dạng trái cây",
+        "3️⃣ Chương 3",
+        "4️⃣ Chương 4",
+        "9️⃣ Chương 9",
+        "📞 Liên hệ"
+    ]
+    main_choice = st.sidebar.selectbox("🔽 Chọn chức năng", main_menu, key="main_menu")
 
-        if choice == "➕ Làm thêm":
-            st.session_state.menu_state = "extra"
-            st.rerun()  # Sử dụng st.rerun() thay vì st.experimental_rerun()
+    # Menu Làm thêm (độc lập, hiển thị bên dưới menu chính)
+    st.sidebar.title("➕ Làm thêm")
+    extra_menu = [
+        "📸 Điều chỉnh âm lượng bằng cử chỉ",
+        "📷 Đếm ngón tay",
+        "📷 Phân loại rác",
+        "5️⃣ Chương 5",
+        "📞 Liên hệ"
+    ]
+    extra_choice = st.sidebar.selectbox("🔽 Chọn chức năng", extra_menu, key="extra_menu")
 
-    # Menu phụ (Làm thêm)
-    else:
-        menu = [
-            "🏠 Trang chủ",
-            "📸 Điều chỉnh âm lượng bằng cử chỉ",
-            "📷 Đếm ngón tay",
-            "📷 Phân loại rác",
-            "...",
-            "⬅️ Quay lại",
-            "📞 Liên hệ"
-        ]
-        choice = st.sidebar.selectbox("🔽 Chọn chức năng", menu)
-
-        if choice == "⬅️ Quay lại":
-            st.session_state.menu_state = "main"
-            st.rerun()  # Sử dụng st.rerun() thay vì st.experimental_rerun()
-
-    return choice
+    return main_choice, extra_choice
 
 def Body():
     st.markdown("### 📌 Giới thiệu dự án Xử lý Ảnh Số")
@@ -96,7 +81,7 @@ def Body():
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        st.image("D:\HCMUTE\MAJOR\XuLyAnhSo\DIP_Project\images\DIP.jpg", width=400)
+        st.image("./images/DIP.jpg", width=400)
         st.caption("🎯 Never give up!")
 
     with col2:
