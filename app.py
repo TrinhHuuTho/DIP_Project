@@ -1,5 +1,6 @@
 from views.home import Header, Menu, Body, Footer
 from views.face_recognition import FaceRecognitionView
+from views.fruit_recognition import FruitRecognitionView
 from views.image_processing_ch3 import ImageProcessingView
 from views.image_processing_ch4 import ImageProcessingCh4View
 from views.image_processing_ch5 import ImageProcessingCh5View
@@ -18,7 +19,7 @@ def main():
         FaceRecognitionView()
 
     elif choice == "📷 Nhận dạng trái cây":
-        st.write("Chức năng này chưa được triển khai.")
+        FruitRecognitionView()
 
     elif choice == "3️⃣ Chương 3":
         ImageProcessingView()

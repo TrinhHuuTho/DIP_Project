@@ -12,14 +12,14 @@ DIP_PROJECT/
 │
 ├── models/              # Thư mục cho tầng Model (xử lý dữ liệu, business logic)
 │   ├── __init__.py
-│   ├── data_model.py     # Ví dụ: load data, xử lý tính toán
-│   └── user_model.py     # Ví dụ: thông tin người dùng
+│   ├── data_model.py     # Xử lý dữ liệu và tính toán
+│   └── user_model.py     # Quản lý thông tin người dùng
 │
 ├── views/               # Thư mục cho tầng View (hiển thị giao diện Streamlit)
 │   ├── __init__.py
-│   ├── home_view.py      # View trang chủ
-│   ├── dashboard_view.py # View dashboard
-│   └── form_view.py      # View các form nhập liệu
+│   ├── home_view.py      # Giao diện trang chủ
+│   ├── dashboard_view.py # Giao diện dashboard
+│   └── form_view.py      # Giao diện các form nhập liệu
 │
 ├── controllers/         # Thư mục cho tầng Controller (điều phối logic giữa Model và View)
 │   ├── __init__.py
@@ -33,17 +33,17 @@ DIP_PROJECT/
 │   └── helpers.py        # Các hàm tiện ích
 │
 ├── images/              # Thư mục chứa hình ảnh mẫu hoặc đầu vào
-│   ├── ImageProcessing_Chapter3/
-│   ├── ImageProcessing_Chapter4/
-│   ├── ImageProcessing_Chapter5/
-│   └── ImageProcessing_Chapter9/
+│   ├── ImageProcessing_Chapter3/  # Hình ảnh liên quan đến chương 3
+│   ├── ImageProcessing_Chapter4/  # Hình ảnh liên quan đến chương 4
+│   ├── ImageProcessing_Chapter5/  # Hình ảnh liên quan đến chương 5
+│   └── ImageProcessing_Chapter9/  # Hình ảnh liên quan đến chương 9
 │
-├── models/              # Thư mục chứa các mô hình AI/ML
+├── ai_models/           # Thư mục chứa các mô hình AI/ML
 │   ├── face_detection_yunet_2023mar.onnx
 │   ├── face_recognition_sface_2021dec.onnx
 │   └── svc.pkl
 │
-├── requirements.txt     # Các thư viện cần cài (streamlit, pandas, numpy, v.v.)
+├── requirements.txt     # Danh sách các thư viện cần cài đặt
 ├── LICENSE              # Thông tin bản quyền
 └── README.md            # Tài liệu hướng dẫn dự án
 ```
