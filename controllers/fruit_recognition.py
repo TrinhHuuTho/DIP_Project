@@ -9,16 +9,16 @@ fruit_name_mapping = {
     "lemon": "Chanh",
     "orange": "Cam",
     "pomegranate": "Luu",
-    "fruit": "Sau rieng",
+    "sau_rieng": "Sau rieng",
     "pitaya": "Thanh long"
 }
 
 # Danh sách class của mô hình
-class_names = ['apple', 'banana', 'guava', 'lemon', 'orange', 'pomegranate', 'fruit', 'pitaya']
+class_names = ['apple', 'banana', 'guava', 'lemon', 'orange', 'pomegranate', 'sau_rieng', 'pitaya']
 
 def load_model():
     # Load mô hình YOLOv8n ONNX
-    net = cv2.dnn.readNetFromONNX("./models/yolov8n_fruit.pt")
+    net = cv2.dnn.readNetFromONNX("./models/yolov8n_fruit_v2.onnx")
     return net
 
 def preprocess_image(image, input_size=(640, 640)):

@@ -61,6 +61,7 @@ def Menu():
             "🏠 Trang chủ",
             "📸 Điều chỉnh âm lượng bằng cử chỉ",
             "📷 Đếm ngón tay",
+            "📷 Phân loại rác",
             "...",
             "⬅️ Quay lại",
             "📞 Liên hệ"

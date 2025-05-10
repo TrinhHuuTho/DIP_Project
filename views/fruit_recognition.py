@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 import numpy as np
 from controllers.fruit_recognition import load_model, recognize_fruit
-from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, RTCConfiguration
+from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, RTCConfiguration # type: ignore
 
 RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}

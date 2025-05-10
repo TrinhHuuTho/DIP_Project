@@ -1,5 +1,5 @@
 import cv2
-import mediapipe as mp
+import mediapipe as mp # type: ignore
 import time
 import streamlit as st
 # pip install python-time
@@ -20,6 +20,9 @@ def FingerCountView():
     with mp_hand.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands:
         while True:
             ret, image = video.read()
+            if not ret:
+                st.warning("Failed to capture video frame. Please check your camera.")
+                continue
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             image.flags.writeable = False
             results = hands.process(image)

@@ -1,7 +1,3 @@
-import streamlit as st
-
-
-
 from views.home import Header, Menu, Body, Footer
 from views.face_recognition import FaceRecognitionView
 from views.fruit_recognition import FruitRecognitionView
@@ -11,7 +7,7 @@ from views.image_processing_ch5 import ImageProcessingCh5View
 from views.image_processing_ch9 import ImageProcessingCh9View
 from views.adjust_volume_by_hand import AdjustVolumeView
 from views.finger_count import FingerCountView
-from views.hand_gesture_recognition import HandGestureRecognitionView
+from views.waste_classification import WasteClassificationView
 
 def main():
     choice = Menu()
@@ -45,6 +41,9 @@ def main():
 
     elif choice == "📷 Đếm ngón tay":
         FingerCountView()
+        
+    elif choice == "📷 Phân loại rác":
+        WasteClassificationView()
 
     elif choice == "...":
         return None
