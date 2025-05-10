@@ -1,12 +1,23 @@
 import streamlit as st
-
+st.set_page_config(
+    page_title="Đồ án cuối kỳ DIP",
+    page_icon="☕",
+)
 def Header():
     st.markdown(
         """
         <div style="text-align:center">
             <h1>📷 Digital Image Processing Project</h1>
-            <p style="font-size:18px;">Chào mừng bạn đến với ứng dụng xử lý ảnh số! Đây là dự án môn Xử lý Ảnh Số.</p>
+            <p style="font-size:18px;">Chào mừng đến Project cuối kỳ môn Xử lý Ảnh Số DIPR430685 - Học kỳ II - Năm học 2024-2025</p>
+            <p style="font-size:20px;">TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HCM</p>
+            <p style="font-size:20px;">KHOA CÔNG NGHỆ THÔNG TIN</p>
         </div>
+        #Nhóm sinh viên:
+        <ul>
+            <li>Trịnh Hữu Thọ - 22110238 - Lớp Xử Lý Ảnh Số chiều thứ 3</li>
+            <li>Nguyễn Hữu Thông - 22110239 - Lớp Xử Lý Ảnh Số chiều thứ 5</li>
+        </ul>
+        
         """,
         unsafe_allow_html=True
     )
@@ -85,7 +96,7 @@ def Body():
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        st.video("https://www.youtube.com/watch?v=CMrHM8a3hqw&ab_channel=Simplilearn")
+        st.image("D:\HCMUTE\MAJOR\XuLyAnhSo\DIP_Project\images\DIP.jpg", width=400)
         st.caption("🎯 Never give up!")
 
     with col2:
@@ -103,8 +114,8 @@ def Footer():
     
     col1, col2 = st.columns([2, 1])
     with col1:
-        st.write("📩 **Email:** trinhuutho@gmail.com")
-        st.write("📌 **Facebook:** [Facebook Page](https://www.facebook.com/tho.trinh.56614)")
+        st.write("📩 **Email trưởng nhóm:** trinhuutho@gmail.com")
+        st.write("📌 **Facebook trưởng nhóm:** [Facebook Page](https://www.facebook.com/tho.trinh.56614)")
     with col2:
         st.image("https://byvn.net/Il7R", width=200)
     st.markdown("---")

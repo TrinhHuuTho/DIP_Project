@@ -5,7 +5,7 @@ from views.image_processing_ch3 import ImageProcessingView
 from views.image_processing_ch4 import ImageProcessingCh4View
 from views.image_processing_ch5 import ImageProcessingCh5View
 from views.image_processing_ch9 import ImageProcessingCh9View
-from views.adjust_volume_by_hand import AdjustVolumeView
+from views.adjust_volume_by_hand  import AdjustVolumeView
 from views.finger_count import FingerCountView
 from views.waste_classification import WasteClassificationView
 
@@ -44,9 +44,6 @@ def main():
         
     elif choice == "📷 Phân loại rác":
         WasteClassificationView()
-
-    elif choice == "...":
-        return None
 
     elif choice == "📞 Liên hệ":
         Footer()
