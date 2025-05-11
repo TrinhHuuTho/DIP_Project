@@ -6,3 +6,7 @@
 *.pyc
 __pycache__/
 # IDE
+
+# Files tài liệu
+*.mp4
+# Files tài liệu

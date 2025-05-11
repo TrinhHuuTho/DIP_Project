@@ -44,9 +44,7 @@ DIP_PROJECT/
 │   └── waste_classification.py
 │
 ├── utils/               # Thư viện phụ trợ (helper functions, configs, constants)
-│   ├── __init__.py
-│   ├── config.py         # Các biến cấu hình chung
-│   └── helpers.py        # Các hàm tiện ích
+│   └── config.py         # Các biến cấu hình chung
 │
 ├── images/              # Thư mục chứa hình ảnh mẫu hoặc đầu vào
 │   ├── DIP.jpg
@@ -105,7 +103,7 @@ Chúng tôi hoan nghênh mọi đóng góp để cải thiện dự án này. N�
 
 2. **Clone repository**:
    ```bash
-   git clone https://github.com/<your-username>/DIP_Project.git
+   git clone https://github.com/TrinhHuuTho/DIP_Project.git
    cd DIP_Project
    ```
 

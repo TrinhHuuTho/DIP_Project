@@ -1,13 +1,11 @@
 comtypes==1.4.10
 joblib==1.4.2
-joblib==1.5.0
 mediapipe==0.10.21
 numpy==2.2.5
-opencv_contrib_python==4.11.0.86
 opencv_python==4.11.0.86
 Pillow==11.2.1
 pycaw==20240210
 scipy==1.15.3
+scikit_learn
 streamlit==1.42.2
-streamlit==1.45.0
 streamlit_webrtc==0.62.4
