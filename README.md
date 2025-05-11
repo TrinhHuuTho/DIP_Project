@@ -10,7 +10,7 @@ DIP_PROJECT/
 │
 ├── app.py               # Điểm bắt đầu chạy app Streamlit
 │
-├── models/              # Thư mục cho tầng Model (xử lý dữ liệu, business logic)
+├── models/              # Thư mục lưu trữ các mô hình AI/ML (Machine Learning Models)
 │   ├── face_detection_yunet_2023mar.onnx
 │   ├── face_recognition_sface_2021dec.onnx
 │   ├── svc.pkl
