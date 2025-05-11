@@ -1,12 +1,11 @@
 import cv2
 import numpy as np
-import pycaw
 import controllers.handDetectionModule as htm
 import math
 from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
-import comtypes
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+from comtypes import CLSCTX_ALL # type: ignore
+import comtypes # type: ignore
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume # type: ignore
 import streamlit as st
 
 def AdjustVolumeView():
