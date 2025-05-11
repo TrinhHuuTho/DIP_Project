@@ -29,7 +29,7 @@ def ImageProcessingCh9View():
         """
         <div class="image-processing-container">
             <h3>📷 Chương 9: Xử lý ảnh hình thái học và đếm đối tượng</h3>
-            <p>Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
+            <p style="color: #007acc;">Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
         </div>
         """,
         unsafe_allow_html=True

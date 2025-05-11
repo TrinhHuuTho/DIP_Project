@@ -45,7 +45,7 @@ def FruitRecognitionView():
         """
         <div class="fruit-recognition-container">
             <h3>📷 Nhận dạng trái cây</h3>
-            <p>Chọn chế độ để nhận diện trái cây từ webcam hoặc tải lên ảnh.</p>
+            <p style="color: #ff4500;">Chọn chế độ để nhận diện trái cây từ webcam hoặc tải lên ảnh.</p>
         </div>
         """,
         unsafe_allow_html=True

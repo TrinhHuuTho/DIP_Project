@@ -43,7 +43,7 @@ def WasteClassificationView():
         """
         <div class="waste-classification-container">
             <h3>🗑️ Phân loại rác</h3>
-            <p>Chọn loại rác để xem ảnh mặc định hoặc tải lên ảnh để phân loại rác.</p>
+            <p style="color: #ff69b4;">Chọn loại rác để xem ảnh mặc định hoặc tải lên ảnh để phân loại rác.</p>
         </div>
         """,
         unsafe_allow_html=True

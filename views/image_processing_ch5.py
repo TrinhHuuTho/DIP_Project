@@ -28,7 +28,7 @@ def ImageProcessingCh5View():
         """
         <div class="image-processing-container">
             <h3>📷 Chương 5: Xử lý ảnh trong miền tần số và khử nhiễu</h3>
-            <p>Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
+            <p style="color: #007acc;">Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
         </div>
         """,
         unsafe_allow_html=True

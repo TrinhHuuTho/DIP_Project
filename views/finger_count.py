@@ -29,7 +29,7 @@ def FingerCountView():
         """
         <div class="finger-count-container">
             <h3>📸 Đếm Ngón Tay</h3>
-            <p>Hướng dẫn: Sử dụng bàn tay để hiển thị số ngón tay đang giơ lên.</p>
+            <p style="color: #32cd32;">Hướng dẫn: Sử dụng bàn tay để hiển thị số ngón tay đang giơ lên.</p>
         </div>
         """,
         unsafe_allow_html=True

@@ -105,7 +105,7 @@ def FaceRecognitionView():
         """
         <div class="face-recognition-container">
             <h3>📸 Nhận dạng khuôn mặt</h3>
-            <p>Chọn chế độ để nhận diện khuôn mặt từ webcam hoặc tải lên ảnh.</p>
+            <p style="color: #4CAF50;">Chọn chế độ để nhận diện khuôn mặt từ webcam hoặc tải lên ảnh.</p>
         </div>
         """,
         unsafe_allow_html=True

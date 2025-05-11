@@ -31,7 +31,7 @@ def AdjustVolumeView():
         """
         <div class="adjust-volume-container">
             <h3>📸 Điều chỉnh âm lượng bằng cử chỉ</h3>
-            <p>Sử dụng cử chỉ tay để điều chỉnh âm lượng.</p>
+            <p style="color: #daa520;">Sử dụng cử chỉ tay để điều chỉnh âm lượng.</p>
         </div>
         """,
         unsafe_allow_html=True

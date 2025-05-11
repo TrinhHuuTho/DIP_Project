@@ -31,7 +31,7 @@ def ImageProcessingView():
         """
         <div class="image-processing-container">
             <h3>📷 Chương 3: Xử lý ảnh</h3>
-            <p>Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
+            <p style="color: #007acc;">Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
         </div>
         """,
         unsafe_allow_html=True
