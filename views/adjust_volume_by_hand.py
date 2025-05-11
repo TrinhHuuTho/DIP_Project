@@ -10,6 +10,34 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import streamlit as st
 
 def AdjustVolumeView():
+    st.markdown(
+        """
+        <style>
+        .adjust-volume-container {
+            text-align: center;
+            background-color: #f5f5dc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .adjust-volume-container h3 {
+            color: #daa520;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="adjust-volume-container">
+            <h3>📸 Điều chỉnh âm lượng bằng cử chỉ</h3>
+            <p>Sử dụng cử chỉ tay để điều chỉnh âm lượng.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     # Page title
     st.markdown("# Điều khiển volume bằng cử chỉ")
     st.markdown("### Hướng dẫn: Sử dụng ngón cái và ngón trỏ để điều chỉnh âm lượng")

@@ -9,8 +9,33 @@ from controllers.image_processing_ch3 import (
 )
 
 def ImageProcessingView():
-    st.markdown("### 📷 Chương 3: Xử lý ảnh")
-    st.write("Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.")
+    st.markdown(
+        """
+        <style>
+        .image-processing-container {
+            text-align: center;
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .image-processing-container h3 {
+            color: #007acc;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="image-processing-container">
+            <h3>📷 Chương 3: Xử lý ảnh</h3>
+            <p>Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Danh sách các phương pháp xử lý ảnh
     methods = [

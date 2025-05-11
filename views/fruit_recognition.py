@@ -23,8 +23,33 @@ class FruitRecognitionProcessor(VideoProcessorBase):
         return frame.from_ndarray(img, format="bgr24")
 
 def FruitRecognitionView():
-    st.markdown("### 📷 Nhận dạng trái cây")
-    st.write("Chọn chế độ để nhận diện trái cây từ webcam hoặc tải lên ảnh.")
+    st.markdown(
+        """
+        <style>
+        .fruit-recognition-container {
+            text-align: center;
+            background-color: #fff8dc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .fruit-recognition-container h3 {
+            color: #ff4500;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="fruit-recognition-container">
+            <h3>📷 Nhận dạng trái cây</h3>
+            <p>Chọn chế độ để nhận diện trái cây từ webcam hoặc tải lên ảnh.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Load mô hình YOLOv8n
     @st.cache_resource

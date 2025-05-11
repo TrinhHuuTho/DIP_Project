@@ -21,8 +21,33 @@ list_images_trash = [
 waste_types = get_waste_types()
 
 def WasteClassificationView():
-    st.markdown("### 🗑️ Phân loại rác")
-    st.write("Chọn loại rác để xem ảnh mặc định hoặc tải lên ảnh để phân loại rác.")
+    st.markdown(
+        """
+        <style>
+        .waste-classification-container {
+            text-align: center;
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .waste-classification-container h3 {
+            color: #ff69b4;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="waste-classification-container">
+            <h3>🗑️ Phân loại rác</h3>
+            <p>Chọn loại rác để xem ảnh mặc định hoặc tải lên ảnh để phân loại rác.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Load mô hình YOLOv8 ONNX
     @st.cache_resource

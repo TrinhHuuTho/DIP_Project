@@ -7,9 +7,33 @@ import streamlit as st
 # pip install mediapipe
 
 def FingerCountView():
-    # Page title
-    st.markdown("# Đếm Ngón Tay")
-    st.markdown("### Hướng dẫn: Sử dụng bàn tay để hiển thị số ngón tay đang giơ lên")
+    st.markdown(
+        """
+        <style>
+        .finger-count-container {
+            text-align: center;
+            background-color: #f0fff0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .finger-count-container h3 {
+            color: #32cd32;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="finger-count-container">
+            <h3>📸 Đếm Ngón Tay</h3>
+            <p>Hướng dẫn: Sử dụng bàn tay để hiển thị số ngón tay đang giơ lên.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
     # Khởi tạo các biến cần thiết
     mp_draw = mp.solutions.drawing_utils
