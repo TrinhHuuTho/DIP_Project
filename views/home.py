@@ -47,6 +47,7 @@ def Menu():
 
     # Menu chính
     main_menu = [
+        "--- Chọn chức năng ---",  # Lựa chọn rỗng
         "🏠 Trang chủ",
         "📸 Nhận dạng khuôn mặt",
         "📷 Nhận dạng trái cây",
@@ -55,7 +56,7 @@ def Menu():
         "9️⃣ Chương 9",
         "📞 Liên hệ"
     ]
-    main_choice = st.sidebar.selectbox("🔽 Chọn chức năng", main_menu, key="main_menu")
+    main_choice = st.sidebar.selectbox("🔽 Chọn chức năng", main_menu, key="main_menu", index=1)  # Mặc định chọn lựa chọn rỗng
 
     # Menu Làm thêm (độc lập, hiển thị bên dưới menu chính)
     st.sidebar.title("➕ Làm thêm")
