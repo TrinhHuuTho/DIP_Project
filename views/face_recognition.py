@@ -83,8 +83,33 @@ class FaceRecognitionProcessor(VideoProcessorBase):
             return frame
 
 def FaceRecognitionView():
-    st.markdown("### 📸 Nhận dạng khuôn mặt")
-    st.write("Chọn chế độ để nhận diện khuôn mặt từ webcam hoặc tải lên ảnh.")
+    st.markdown(
+        """
+        <style>
+        .face-recognition-container {
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .face-recognition-container h3 {
+            color: #4CAF50;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="face-recognition-container">
+            <h3>📸 Nhận dạng khuôn mặt</h3>
+            <p style="color: #4CAF50;">Chọn chế độ để nhận diện khuôn mặt từ webcam hoặc tải lên ảnh.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Khởi tạo mô hình
     @st.cache_resource

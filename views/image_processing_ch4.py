@@ -6,8 +6,33 @@ from controllers.image_processing_ch4 import (
 )
 
 def ImageProcessingCh4View():
-    st.markdown("### 📷 Chương 4: Xử lý ảnh trong miền tần số")
-    st.write("Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.")
+    st.markdown(
+        """
+        <style>
+        .image-processing-container {
+            text-align: center;
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .image-processing-container h3 {
+            color: #007acc;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="image-processing-container">
+            <h3>📷 Chương 4: Xử lý ảnh trong miền tần số</h3>
+            <p style="color: #007acc;">Tải lên ảnh và chọn phương pháp xử lý ảnh để xem kết quả.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Danh sách các phương pháp xử lý ảnh
     methods = [

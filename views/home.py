@@ -1,77 +1,117 @@
 import streamlit as st
 
 def Header():
+    # Thêm CSS toàn cục
     st.markdown(
         """
-        <div style="text-align:center">
+        <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .header-container {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .header-container h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header-container p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Nội dung tiêu đề
+    st.markdown(
+        """
+        <div class="header-container">
             <h1>📷 Digital Image Processing Project</h1>
-            <p style="font-size:18px;">Chào mừng bạn đến với ứng dụng xử lý ảnh số! Đây là dự án môn Xử lý Ảnh Số.</p>
+            <p>Chào mừng đến Project cuối kỳ môn Xử lý Ảnh Số DIPR430685 - Học kỳ II - Năm học 2024-2025</p>
+            <p>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HCM</p>
+            <p>KHOA CÔNG NGHỆ THÔNG TIN</p>
+        </div>
+        <div>
+            <h3>Nhóm sinh viên:</h3>
+            <ul>
+                <li>Trịnh Hửu Thọ - 22110238 - Lớp Xử Lý Ảnh Số chiều thứ 3</li>
+                <li>Nguyễn Hữu Thông - 22110239 - Lớp Xử Lý Ảnh Số chiều thứ 5</li>
+            </ul>
+            <h3>Giảng viên hướng dẫn:</h3>
+            <ul>
+                <li>Trần Tiến Đức</li>
+            </ul>
         </div>
         """,
         unsafe_allow_html=True
     )
-    st.vega_lite_chart({
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "description": "A bar chart showing the distribution of image processing metrics.",
-        "data": {
-            "values": [
-                {"category": "Accuracy", "score": 0.90},
-                {"category": "Precision", "score": 0.85},
-                {"category": "Recall", "score": 0.88},
-                {"category": "F1-Score", "score": 0.87}
-            ]
-        },
-        "mark": "bar",
-        "encoding": {
-            "x": {"field": "category", "type": "nominal", "title": "Metric"},
-            "y": {"field": "score", "type": "quantitative", "title": "Score"},
-            "color": {"field": "category", "type": "nominal"}
-        }
-    })
 
 def Menu():
-    # Khởi tạo trạng thái menu trong session_state
-    if 'menu_state' not in st.session_state:
-        st.session_state.menu_state = "main"
+    # Thêm CSS cho sidebar
+    st.markdown(
+        """
+        <style>
+        [data-testid="stSidebar"] {
+            border-right: 2px solid #4CAF50;
+            padding: 10px;
+        }
+        [data-testid="stSidebar"] h1 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        [data-testid="stSidebar"] .css-1d391kg {
+            font-size: 1.1em;
+            color: #333;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     st.sidebar.title("📌 Menu")
 
     # Menu chính
-    if st.session_state.menu_state == "main":
-        menu = [
-            "🏠 Trang chủ",
-            "📸 Nhận dạng khuôn mặt",
-            "📷 Nhận dạng trái cây",
-            "3️⃣ Chương 3",
-            "4️⃣ Chương 4",
-            "5️⃣ Chương 5",
-            "9️⃣ Chương 9",
-            "➕ Làm thêm",
-            "📞 Liên hệ"
-        ]
-        choice = st.sidebar.selectbox("🔽 Chọn chức năng", menu)
+    main_menu = [
+        "--- Chọn chức năng ---",  # Lựa chọn rỗng
+        "🏠 Trang chủ",
+        "📸 Nhận dạng khuôn mặt",
+        "📷 Nhận dạng trái cây",
+        "3️⃣ Chương 3",
+        "4️⃣ Chương 4",
+        "9️⃣ Chương 9",
+        "📞 Liên hệ"
+    ]
+    main_choice = st.sidebar.selectbox("🔽 Chọn chức năng", main_menu, key="main_menu", index=1)  # Mặc định chọn lựa chọn rỗng
 
-        if choice == "➕ Làm thêm":
-            st.session_state.menu_state = "extra"
-            st.rerun()  # Sử dụng st.rerun() thay vì st.experimental_rerun()
+    # Menu Làm thêm (độc lập, hiển thị bên dưới menu chính)
+    st.sidebar.title("➕ Phần Làm thêm")
+    extra_menu = [
+        "📸 Điều chỉnh âm lượng bằng cử chỉ",
+        "📷 Đếm ngón tay",
+        "📷 Phân loại rác",
+        "5️⃣ Chương 5",
+        "📞 Liên hệ"
+    ]
+    extra_choice = st.sidebar.selectbox("🔽 Chọn chức năng", extra_menu, key="extra_menu")
 
-    # Menu phụ (Làm thêm)
-    else:
-        menu = [
-            "🏠 Trang chủ",
-            "📸 Nhận dạng biển số xe",
-            "📷 Nhận dạng chữ viết",
-            "...",
-            "⬅️ Quay lại",
-            "📞 Liên hệ"
-        ]
-        choice = st.sidebar.selectbox("🔽 Chọn chức năng", menu)
-
-        if choice == "⬅️ Quay lại":
-            st.session_state.menu_state = "main"
-            st.rerun()  # Sử dụng st.rerun() thay vì st.experimental_rerun()
-
-    return choice
+    return main_choice, extra_choice
 
 def Body():
     st.markdown("### 📌 Giới thiệu dự án Xử lý Ảnh Số")
@@ -84,7 +124,7 @@ def Body():
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        st.video("https://www.youtube.com/watch?v=CMrHM8a3hqw&ab_channel=Simplilearn")
+        st.image("./images/DIP.jpg", width=400)
         st.caption("🎯 Never give up!")
 
     with col2:
@@ -102,8 +142,8 @@ def Footer():
     
     col1, col2 = st.columns([2, 1])
     with col1:
-        st.write("📩 **Email:** trinhuutho@gmail.com")
-        st.write("📌 **Facebook:** [Facebook Page](https://www.facebook.com/tho.trinh.56614)")
+        st.write("📩 **Email trưởng nhóm:** trinhuutho@gmail.com")
+        st.write("📌 **Facebook trưởng nhóm:** [Facebook Page](https://www.facebook.com/tho.trinh.56614)")
     with col2:
         st.image("https://byvn.net/Il7R", width=200)
     st.markdown("---")
