@@ -1,10 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Đồ án cuối kỳ DIP",
-    page_icon="☕",
-)
-
 def Header():
     # Thêm CSS toàn cục
     st.markdown(

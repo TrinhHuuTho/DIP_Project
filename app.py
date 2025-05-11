@@ -8,6 +8,9 @@ from views.image_processing_ch9 import ImageProcessingCh9View
 from views.adjust_volume_by_hand import AdjustVolumeView
 from views.finger_count import FingerCountView
 from views.waste_classification import WasteClassificationView
+from utils.config import set_global_page_config
+
+set_global_page_config()
 
 def main():
     main_choice, extra_choice = Menu()
