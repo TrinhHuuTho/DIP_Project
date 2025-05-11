@@ -10,7 +10,7 @@ DIP_PROJECT/
 │
 ├── app.py               # Điểm bắt đầu chạy app Streamlit
 │
-├── models/              # Thư mục cho tầng Model (xử lý dữ liệu, business logic)
+├── models/              # Thư mục lưu trữ các mô hình AI/ML (Machine Learning Models)
 │   ├── face_detection_yunet_2023mar.onnx
 │   ├── face_recognition_sface_2021dec.onnx
 │   ├── svc.pkl
@@ -44,9 +44,7 @@ DIP_PROJECT/
 │   └── waste_classification.py
 │
 ├── utils/               # Thư viện phụ trợ (helper functions, configs, constants)
-│   ├── __init__.py
-│   ├── config.py         # Các biến cấu hình chung
-│   └── helpers.py        # Các hàm tiện ích
+│   └── config.py         # Các biến cấu hình chung
 │
 ├── images/              # Thư mục chứa hình ảnh mẫu hoặc đầu vào
 │   ├── DIP.jpg
@@ -105,7 +103,7 @@ Chúng tôi hoan nghênh mọi đóng góp để cải thiện dự án này. N�
 
 2. **Clone repository**:
    ```bash
-   git clone https://github.com/<your-username>/DIP_Project.git
+   git clone https://github.com/TrinhHuuTho/DIP_Project.git
    cd DIP_Project
    ```
 
